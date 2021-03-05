@@ -1,0 +1,9 @@
+package badstmt
+
+import (
+	"utilware/dep/x/tools/internal/lsp/foo"
+)
+
+func _() {
+	go foo. //@complete(" //", Foo, IntFoo, StructFoo)
+}
