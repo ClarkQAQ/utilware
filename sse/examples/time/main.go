@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/JanBerktold/sse"
 	"net/http"
 	"time"
+	"utilware/sse"
 )
 
 func HandleSSE(w http.ResponseWriter, r *http.Request) {
