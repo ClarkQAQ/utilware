@@ -121,11 +121,11 @@ func (s *strictEq) MatchField(v interface{}) (bool, error) {
 }
 
 type contains struct {
-	value interface{}
+	value string
 }
 
 func (s *contains) MatchField(v interface{}) (bool, error) {
-	return strings.Contains(fmt.Sprintf("%v", v), fmt.Sprintf("%v", s.value)), nil
+	return strings.Contains(fmt.Sprint(v), s.value), nil
 }
 
 type tagList struct {
@@ -226,7 +226,7 @@ func StrictEq(field string, v interface{}) Matcher {
 }
 
 // strings Contains
-func Contains(field string, v interface{}) Matcher {
+func Contains(field string, v string) Matcher {
 	return NewFieldMatcher(field, &contains{value: v})
 }
 
