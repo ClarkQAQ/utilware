@@ -73,3 +73,4 @@ func main() {
 22. `utilware/gow` 看着`Golang 7 天Web框架` 写的垃圾框架, 类似Gin
 23. `utilware/sse` HTTP ServerSendEvents 服务器单方面推送协议 Doc:https://developer.mozilla.org/zh-TW/docs/Web/API/Server-sent_events
 24. `grpool` Golang 协程限制和调度
+25. `jwt` Golang Json Web Token 封装
