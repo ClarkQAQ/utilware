@@ -7,10 +7,11 @@ package packet
 import (
 	"crypto"
 	"encoding/binary"
-	"utilware/dep/x/crypto/openpgp/errors"
-	"utilware/dep/x/crypto/openpgp/s2k"
 	"io"
 	"strconv"
+
+	"utilware/dep/x/crypto/openpgp/errors"
+	"utilware/dep/x/crypto/openpgp/s2k"
 )
 
 // OnePassSignature represents a one-pass signature packet. See RFC 4880,

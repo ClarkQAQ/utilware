@@ -3,12 +3,13 @@ package gow
 import (
 	"embed"
 	"errors"
+	"fmt"
 	"html/template"
 	"io/ioutil"
+	"net"
 	"net/http"
 	"path"
 	"strings"
-	"time"
 )
 
 // HandlerFunc defines the request handler used by gee
@@ -112,7 +113,7 @@ func (group *RouterGroup) createStaticHandler(relativePath string, fs http.FileS
 
 	return func(c *Context) {
 		// Check if file exists and/or if we have permission to access it
-		//fmt.Println(c.Param("filepath"))
+		fmt.Println(c.Param("filepath"))
 		file, err := fs.Open(c.Param("filepath"))
 		if err != nil {
 			c.String(404, "404 page not found")
@@ -215,17 +216,22 @@ func (engine *Engine) RunTls(addr string, crt string, key string) (err error) {
 	return http.ListenAndServeTLS(addr, crt, key, engine)
 }
 
-func (engine *Engine) RunServe(addr string) error {
+func (engine *Engine) RunServe(addr string) (net.Listener, error) {
 	if engine.http != nil {
-		return errors.New("http server is start!")
+		return nil, errors.New("http server is start!")
 	}
+
+	ln, err := net.Listen("tcp", addr)
+	if err != nil {
+		return nil, err
+	}
+
 	engine.http = &http.Server{Addr: addr, Handler: engine}
-	var err error = nil
+
 	go func() {
-		err = engine.http.ListenAndServe()
+		engine.http.Serve(ln)
 	}()
-	time.Sleep(1 * time.Second) //等待1秒钟看看Goroutine有没有报错!
-	return err
+	return ln, nil
 }
 
 func (engine *Engine) ShutdownServe() error {
@@ -237,16 +243,21 @@ func (engine *Engine) ShutdownServe() error {
 }
 
 func (engine *Engine) RunTlsServe(addr, crt, key string) error {
-	if engine.https != nil {
+	if engine.http != nil {
 		return errors.New("http server is start!")
 	}
-	engine.https = &http.Server{Addr: addr, Handler: engine}
-	var err error = nil
+
+	ln, err := net.Listen("tcp", addr)
+	if err != nil {
+		return err
+	}
+
+	engine.http = &http.Server{Addr: addr, Handler: engine}
+
 	go func() {
-		err = engine.https.ListenAndServeTLS(crt, key)
+		engine.http.ServeTLS(ln, crt, key)
 	}()
-	time.Sleep(1 * time.Second) //等待1秒钟看看Goroutine有没有报错!
-	return err
+	return nil
 }
 
 func (engine *Engine) ShutdownTlsServe() error {

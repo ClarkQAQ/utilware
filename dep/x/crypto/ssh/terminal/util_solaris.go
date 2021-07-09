@@ -7,9 +7,9 @@
 package terminal // import "utilware/dep/x/crypto/ssh/terminal"
 
 import (
-	"utilware/dep/x/sys/unix"
 	"io"
 	"syscall"
+	"utilware/dep/x/sys/unix"
 )
 
 // State contains the state of a terminal.

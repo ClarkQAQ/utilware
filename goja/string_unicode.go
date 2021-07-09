@@ -11,10 +11,10 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"utilware/goja/parser"
-	"utilware/goja/unistring"
 	"utilware/dep/x/text/cases"
 	"utilware/dep/x/text/language"
+	"utilware/goja/parser"
+	"utilware/goja/unistring"
 )
 
 type unicodeString []uint16

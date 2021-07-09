@@ -76,10 +76,36 @@ func Logger() HandlerFunc {
 		t := time.Now()
 		// Process request
 		c.Next()
-		
+
 		log.SetPrefix(time.Now().In(timeZone).Format("[web] 2006-01-02 15:04:05 "))
 		log.SetFlags(0)
 		// Calculate resolution time
 		log.Printf("[%s] [%d] %s in %v", c.Req.Method, c.StatusCode, c.Req.RequestURI, time.Since(t))
+	}
+}
+
+func ContentType() HandlerFunc {
+	return func(c *Context) {
+		c.Next()
+
+		ct := "text/plain"
+		filepaths := strings.Split(c.Param("filepath"), ".")
+		fmt.Println(filepaths)
+		switch filepaths[len(filepaths)-1] {
+		case "css":
+			ct = "text/css"
+		case "js":
+			ct = "application/x-javascript"
+		case "jpg":
+			ct = "image/jpeg"
+		case "png":
+			ct = "image/png"
+		case "svg":
+			ct = "text/xml"
+		case "html":
+			ct = "text/html"
+		}
+
+		c.SetHeader("Content-Type", fmt.Sprintf("%s; charset=utf-8", ct))
 	}
 }

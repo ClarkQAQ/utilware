@@ -8,10 +8,11 @@ import (
 	"bytes"
 	"encoding/hex"
 	"fmt"
-	"utilware/dep/x/crypto/openpgp/errors"
 	"io"
 	"io/ioutil"
 	"testing"
+
+	"utilware/dep/x/crypto/openpgp/errors"
 )
 
 func TestReadFull(t *testing.T) {

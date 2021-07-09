@@ -8,10 +8,11 @@ import (
 	"crypto/cipher"
 	"crypto/sha1"
 	"crypto/subtle"
-	"utilware/dep/x/crypto/openpgp/errors"
 	"hash"
 	"io"
 	"strconv"
+
+	"utilware/dep/x/crypto/openpgp/errors"
 )
 
 // SymmetricallyEncrypted represents a symmetrically encrypted byte string. The

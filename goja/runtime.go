@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"utilware/goja/file"
 	"go/ast"
 	"hash/maphash"
 	"math"
@@ -14,6 +13,8 @@ import (
 	"runtime"
 	"strconv"
 	"time"
+
+	"utilware/goja/file"
 
 	"utilware/dep/x/text/collate"
 
@@ -2046,6 +2047,43 @@ func AssertFunction(v Value) (Callable, bool) {
 		}
 	}
 	return nil, false
+}
+
+func (r *Runtime) AssertRunFunction(v string, this interface{}, datas ...interface{}) (ret Value, err error) {
+	if obj, ok := r.Get(v).(*Object); ok {
+		if f, ok := obj.self.assertCallable(); ok {
+			defer func() {
+				if x := recover(); x != nil {
+					if ex, ok := x.(*InterruptedError); ok {
+						err = ex
+					} else {
+						panic(x)
+					}
+				}
+			}()
+			var args []Value
+			for i := 0; i < len(datas); i++ {
+				args = append(args, r.ToValue(datas[i]))
+			}
+			ex := obj.runtime.vm.try(func() {
+				ret = f(FunctionCall{
+					This:      r.ToValue(this),
+					Arguments: args,
+				})
+			})
+			if ex != nil {
+				err = ex
+			}
+			vm := obj.runtime.vm
+			vm.clearStack()
+			if len(vm.callStack) == 0 {
+				obj.runtime.leave()
+			}
+			return
+		}
+		return Undefined(), errors.New("call function error")
+	}
+	return Undefined(), errors.New("function does not exist")
 }
 
 // IsUndefined returns true if the supplied Value is undefined. Note, it checks against the real undefined, not

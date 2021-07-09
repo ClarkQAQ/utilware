@@ -3,8 +3,8 @@ package index
 import (
 	"bytes"
 
-	"utilware/storm/internal"
 	bolt "utilware/bbolt"
+	"utilware/storm/internal"
 )
 
 // NewListIndex loads a ListIndex

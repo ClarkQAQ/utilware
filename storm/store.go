@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"reflect"
 
+	bolt "utilware/bbolt"
 	"utilware/storm/index"
 	"utilware/storm/q"
-	bolt "utilware/bbolt"
 )
 
 // TypeStore stores user defined types in BoltDB.

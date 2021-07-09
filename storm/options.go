@@ -3,9 +3,9 @@ package storm
 import (
 	"os"
 
+	bolt "utilware/bbolt"
 	"utilware/storm/codec"
 	"utilware/storm/index"
-	bolt "utilware/bbolt"
 )
 
 // BoltOptions used to pass options to BoltDB.

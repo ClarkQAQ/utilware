@@ -14,11 +14,11 @@ import (
 	"utilware/dep/x/tools/godoc"
 	"utilware/dep/x/tools/godoc/redirect"
 	"utilware/dep/x/tools/godoc/vfs"
-)
 
-// This package registers "/compile" and "/share" handlers
-// that redirect to the ccms playground.
-import _ "utilware/dep/x/tools/playground"
+	// This package registers "/compile" and "/share" handlers
+	// that redirect to the ccms playground.
+	_ "utilware/dep/x/tools/playground"
+)
 
 var (
 	pres *godoc.Presentation

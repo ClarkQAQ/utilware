@@ -1,9 +1,9 @@
 package storm
 
 import (
+	bolt "utilware/bbolt"
 	"utilware/storm/internal"
 	"utilware/storm/q"
-	bolt "utilware/bbolt"
 )
 
 // Select a list of records that match a list of matchers. Doesn't use indexes.

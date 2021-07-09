@@ -5,8 +5,8 @@
 package ianaindex
 
 import (
-	"unicode"
 	"testing"
+	"unicode"
 
 	"utilware/dep/x/text/encoding"
 )

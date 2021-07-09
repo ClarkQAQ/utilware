@@ -8,9 +8,10 @@ import (
 	"compress/bzip2"
 	"compress/flate"
 	"compress/zlib"
-	"utilware/dep/x/crypto/openpgp/errors"
 	"io"
 	"strconv"
+
+	"utilware/dep/x/crypto/openpgp/errors"
 )
 
 // Compressed represents a compressed OpenPGP packet. The decompressed contents

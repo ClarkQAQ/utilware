@@ -1,16 +1,17 @@
 package goja
 
 import (
-	"utilware/goja/unistring"
 	"math"
 	"strings"
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"utilware/goja/parser"
+	"utilware/goja/unistring"
+
 	"utilware/dep/x/text/collate"
 	"utilware/dep/x/text/language"
 	"utilware/dep/x/text/unicode/norm"
+	"utilware/goja/parser"
 )
 
 func (r *Runtime) collator() *collate.Collator {

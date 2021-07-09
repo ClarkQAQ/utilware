@@ -8,8 +8,9 @@ package ed25519_test
 
 import (
 	ed25519std "crypto/ed25519"
-	"utilware/dep/x/crypto/ed25519"
 	"testing"
+
+	"utilware/dep/x/crypto/ed25519"
 )
 
 func TestTypeAlias(t *testing.T) {

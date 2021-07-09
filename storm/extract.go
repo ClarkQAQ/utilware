@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"utilware/storm/index"
 	bolt "utilware/bbolt"
+	"utilware/storm/index"
 )
 
 // Storm tags

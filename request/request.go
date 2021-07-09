@@ -13,6 +13,7 @@ import (
 	"os"
 	"strings"
 	"time"
+
 	"utilware/dep/x/net/proxy"
 )
 
@@ -236,6 +237,8 @@ func (c *Client) Send(body interface{}) *Client {
 	switch body := body.(type) {
 	case string:
 		c.body = bytes.NewBufferString(body)
+	case []byte:
+		c.body = bytes.NewBuffer(body)
 	default:
 		j, err := json.Marshal(body)
 
@@ -248,6 +251,36 @@ func (c *Client) Send(body interface{}) *Client {
 	}
 
 	c.Set(ContentType, "application/json")
+	return c
+}
+
+type MultiFrom map[string]io.Reader
+
+func (c *Client) SendMultiFrom(values MultiFrom) *Client {
+	bodyBuf := &bytes.Buffer{}
+	bodyWriter := multipart.NewWriter(bodyBuf)
+	defer bodyWriter.Close()
+	for key, reader := range values {
+		keys := strings.Split(key, ":")
+		filename := keys[0]
+		if len(keys) > 1 {
+			filename = keys[1]
+		}
+		fmt.Println(keys, filename)
+
+		fw, e := bodyWriter.CreateFormFile(keys[0], filename)
+		if e != nil {
+			c.err = e
+			return c
+		}
+		if _, e = io.Copy(fw, reader); e != nil {
+			c.err = e
+			return c
+		}
+	}
+
+	c.body = bodyBuf
+	c.Set(ContentType, bodyWriter.FormDataContentType())
 	return c
 }
 

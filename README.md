@@ -2,13 +2,12 @@
 
 #### 名称灵感来着Aimware, Aimware永远的空枪FW.....
 
-> 本来不想上传Gayhub的.....但是最近内网穿透可靠性极差.....没办法...(摊手
-
 ---
 
 > 坚持纯Go拒绝CGO!
 
-##### 收集开源项目并去除CGO, 减少依赖后打包....依赖项目统一在 [dep]
+##### Utilware 无任何外部依赖, 真正的ALL IN ONE
+##### 收集开源项目并去除CGO, 减少依赖后打包....依赖项目统一在 [dep] 
 
 ---
 
@@ -17,6 +16,36 @@
 - [ ] 打包工具链
 - [ ] 简化打包流程
 - [ ] 包的版本管理以及更新订阅
+
+#### Task:
+- [ ] Gorm || 7 Day Orm
+- [ ] Google QUIC
+
+#### Go Mod ( 使用方式) :
+
+```mod
+module ${name: goweb}
+
+go ${go: 1.16}
+
+replace utilware => github.com/ClarkQAQ/utilware ${tag: v0.0.1}
+
+require utilware v0.0.0-00010101000000-000000000000
+
+```
+
+```go
+package main
+
+import "utilware/gow"
+
+func main() {
+	gow.New().Run(":8080")
+}
+
+```
+
+
 
 #### 索引:
 

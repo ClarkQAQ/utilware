@@ -10,8 +10,9 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/base64"
-	"utilware/dep/x/crypto/openpgp/errors"
 	"io"
+
+	"utilware/dep/x/crypto/openpgp/errors"
 )
 
 // A Block represents an OpenPGP armored structure.

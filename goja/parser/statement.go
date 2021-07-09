@@ -3,14 +3,15 @@ package parser
 import (
 	"encoding/base64"
 	"fmt"
-	"utilware/goja/ast"
-	"utilware/goja/file"
-	"utilware/goja/token"
-	"utilware/dep/sourcemap"
 	"io/ioutil"
 	"net/url"
 	"path"
 	"strings"
+
+	"utilware/dep/sourcemap"
+	"utilware/goja/ast"
+	"utilware/goja/file"
+	"utilware/goja/token"
 )
 
 func (self *_parser) parseBlockStatement() *ast.BlockStatement {

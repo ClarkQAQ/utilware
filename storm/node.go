@@ -1,8 +1,8 @@
 package storm
 
 import (
-	"utilware/storm/codec"
 	bolt "utilware/bbolt"
+	"utilware/storm/codec"
 )
 
 // A Node in Storm represents the API to a BoltDB bucket.

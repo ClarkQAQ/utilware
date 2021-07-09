@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
+	bolt "utilware/bbolt"
 	"utilware/storm/index"
 	"utilware/storm/q"
-	bolt "utilware/bbolt"
 )
 
 // A Finder can fetch types from BoltDB.
