@@ -1,0 +1,2 @@
+Install: $ go get utilware/sqlite/libc/mathutil/mersenne
+Godocs:  http://gopkgdoc.appspot.com/pkg/utilware/sqlite/libc/mathutil/mersenne

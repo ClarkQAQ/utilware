@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build solaris
 // +build solaris
 
 package unix_test
@@ -9,30 +10,9 @@ package unix_test
 import (
 	"os/exec"
 	"testing"
-	"time"
 
 	"utilware/dep/x/sys/unix"
 )
-
-func TestSelect(t *testing.T) {
-	err := unix.Select(0, nil, nil, nil, &unix.Timeval{Sec: 0, Usec: 0})
-	if err != nil {
-		t.Fatalf("Select: %v", err)
-	}
-
-	dur := 150 * time.Millisecond
-	tv := unix.NsecToTimeval(int64(dur))
-	start := time.Now()
-	err = unix.Select(0, nil, nil, nil, &tv)
-	took := time.Since(start)
-	if err != nil {
-		t.Fatalf("Select: %v", err)
-	}
-
-	if took < dur {
-		t.Errorf("Select: timeout should have been at least %v, got %v", dur, took)
-	}
-}
 
 func TestStatvfs(t *testing.T) {
 	if err := unix.Statvfs("", nil); err == nil {
@@ -52,4 +32,12 @@ func TestStatvfs(t *testing.T) {
 			t.Logf("mount: %s", mount)
 		}
 	}
+}
+
+func TestSysconf(t *testing.T) {
+	n, err := unix.Sysconf(3 /* SC_CLK_TCK */)
+	if err != nil {
+		t.Fatalf("Sysconf: %v", err)
+	}
+	t.Logf("Sysconf(SC_CLK_TCK) = %d", n)
 }

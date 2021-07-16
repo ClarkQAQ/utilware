@@ -7,7 +7,8 @@
 > 坚持纯Go拒绝CGO!
 
 ##### Utilware 无任何外部依赖, 真正的ALL IN ONE
-##### 收集开源项目并去除CGO, 减少依赖后打包....依赖项目统一在 [dep] 
+
+##### 收集开源项目并去除CGO, 减少依赖后打包....依赖项目统一在 [dep]
 
 ---
 
@@ -18,6 +19,7 @@
 - [ ] 包的版本管理以及更新订阅
 
 #### Task:
+
 - [ ] Gorm || 7 Day Orm
 - [ ] Google QUIC
 
@@ -45,8 +47,6 @@ func main() {
 
 ```
 
-
-
 #### 索引:
 
 1. `utilware/bbolt` bolt 纯go高性能kv数据库
@@ -55,7 +55,7 @@ func main() {
 4. `utilware/util/safe` 类似java 的 try catch
 5. `utilware/util/eodec` 快速编码解码
 6. `utilware/util/crypc` 常用加密
-7. `utilware/util/sn` 单链表,用于完成一些`[][]byte`完成不了的事情
+7. `utilware/util/sn` 单链表,用于完成一些 `[][]byte`完成不了的事情
 8. `utilware/util/tsort` 排序拓展
 9. `utilware/util/value` 类型转换以及字符串操作
 10. `utilware/util/elog` 带Event返回的log库
@@ -70,7 +70,8 @@ func main() {
 19. `utilware/tgbotapi` Telegram机器人API (可在NAT后面使用)
 20. `utilware/afero` 文件系统限制和虚拟的库, 封装得挺好....
 21. `utilware/goja` JavaScript进入了Golang的身体.......(hso
-22. `utilware/gow` 看着`Golang 7 天Web框架` 写的垃圾框架, 类似Gin
+22. `utilware/gow` 看着 `Golang 7 天Web框架` 写的垃圾框架, 类似Gin
 23. `utilware/sse` HTTP ServerSendEvents 服务器单方面推送协议 Doc:https://developer.mozilla.org/zh-TW/docs/Web/API/Server-sent_events
 24. `grpool` Golang 协程限制和调度
 25. `jwt` Golang Json Web Token 封装
+26. `sqlite` 惊讶吧.....sqlite居然没有用cgo了 (不过用的是asm), 性能还行....就是好大啊
