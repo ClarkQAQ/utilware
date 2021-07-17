@@ -75,3 +75,6 @@ func main() {
 24. `grpool` Golang 协程限制和调度
 25. `jwt` Golang Json Web Token 封装
 26. `sqlite` 惊讶吧.....sqlite居然没有用cgo了 (不过用的是asm), 性能还行....就是好大啊
+27. `goconfig` Golang 解析INI配置文件库, 主要是因为比较像Gf框架的gcfg, 好用....
+28. `gorm` Golang最好的ORM不为过吧
+29. `gorm/sqlite` [26] sqlite的gorm驱动

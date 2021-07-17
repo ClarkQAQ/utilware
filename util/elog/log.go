@@ -24,6 +24,10 @@ func New(debug bool, timeZone int64, stack bool, defaultLogEvent func(tp string,
 	return &LogType{debug, timeLocation, stack, make(map[string](func(string, string)))}
 }
 
+func (lgt *LogType) DebugMode(b bool) {
+	lgt.debug = b
+}
+
 func callerName() string {
 	pc, _, _, _ := runtime.Caller(3)
 	return runtime.FuncForPC(pc).Name()
