@@ -20,7 +20,7 @@
 
 #### Task:
 
-- [ ] Gorm || 7 Day Orm
+- [X] Gorm || 7 Day Orm
 - [ ] Google QUIC
 
 #### Go Mod ( 使用方式) :
