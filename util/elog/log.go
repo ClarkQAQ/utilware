@@ -12,11 +12,11 @@ import (
 type LogType struct {
 	debug    bool
 	timeZone *time.Location
-	stack    bool
+	stack    int
 	logEvent map[string](func(string, string))
 }
 
-func New(debug bool, timeZone int64, stack bool, defaultLogEvent func(tp string, log string)) *LogType {
+func New(debug bool, timeZone int64, stack int, defaultLogEvent func(tp string, log string)) *LogType {
 	timeLocation := time.FixedZone("time", int((time.Duration(timeZone) * time.Hour).Seconds()))
 	if defaultLogEvent != nil {
 		return &LogType{debug, timeLocation, stack, map[string](func(string, string)){"default": defaultLogEvent}}
@@ -28,8 +28,8 @@ func (lgt *LogType) DebugMode(b bool) {
 	lgt.debug = b
 }
 
-func callerName() string {
-	pc, _, _, _ := runtime.Caller(3)
+func callerName(skip int) string {
+	pc, _, _, _ := runtime.Caller(2 + skip)
 	return runtime.FuncForPC(pc).Name()
 }
 
@@ -74,8 +74,8 @@ func (lgt *LogType) logPrefix(tag string) string {
 }
 
 func (lgt *LogType) logString(list []interface{}) (value string) {
-	if lgt.stack == true {
-		value += fmt.Sprintf(" [$%v] ", callerName())
+	if lgt.stack != 0 {
+		value += fmt.Sprintf(" [%v] ", callerName(lgt.stack))
 	}
 
 	for _, v := range list {
