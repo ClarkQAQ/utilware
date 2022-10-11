@@ -1,0 +1,13 @@
+{
+    "id": "CUedq6RV74im7kebxy8hEN",
+    "name": "sqlx",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": null,
+    "description": "对 sqlx 拙劣的模仿, 特性是日志功能以及事务计数器",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

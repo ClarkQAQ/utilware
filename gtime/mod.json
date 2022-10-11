@@ -1,0 +1,16 @@
+{
+    "id": "cnZgCSTmKm9heg8koxC34Y",
+    "name": "gtime",
+    "url": "https://github.com/gogf/gf/tree/master/os/gtime",
+    "type": "git",
+    "author": "gqcn",
+    "tag": [
+        "gf",
+        "time"
+    ],
+    "description": "GoFrame 拆分出来的时间处理, 具有标准占位符支持.",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

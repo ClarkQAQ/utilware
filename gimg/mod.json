@@ -1,0 +1,15 @@
+{
+    "id": "QLhYUPkzcDWVxPnFofWgn2",
+    "name": "gimg",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": [
+        "image"
+    ],
+    "description": "Golang 轻量级图片处理库",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

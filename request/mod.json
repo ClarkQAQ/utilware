@@ -1,0 +1,16 @@
+{
+    "id": "HMoHk9mRYrNNiiTbE6GFku",
+    "name": "request",
+    "url": "https://github.com/DavidCai1111/request",
+    "type": "git",
+    "author": "DavidCai1111",
+    "tag": [
+        "request",
+        "client"
+    ],
+    "description": "A concise HTTP request client for Go. 一个超轻的 http 客户端, 追加了 multifrom 支持, 并且支持 socks5 或者 http 代理 URL",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

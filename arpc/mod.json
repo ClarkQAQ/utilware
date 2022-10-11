@@ -1,0 +1,17 @@
+{
+    "id": "AYZjqD3hE9DvbS8USZvdZH",
+    "name": "arpc",
+    "url": "https://github.com/lesismal/arpc",
+    "type": "local",
+    "author": "lesismal",
+    "tag": [
+        "rpc",
+        "arpc",
+        "neowork"
+    ],
+    "description": "More Effective Network Communication. 更高效的网络通信通知和广播, 多协议自动重连支持加密的双向rpc库",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

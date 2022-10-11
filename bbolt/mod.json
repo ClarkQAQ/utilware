@@ -1,0 +1,16 @@
+{
+    "id": "683VhQcmcALsRN6SvC3LiM",
+    "name": "bbolt",
+    "url": "https://github.com/etcd-io/bbolt",
+    "type": "git",
+    "author": "benbjohnson,etcd-io",
+    "tag": [
+        "database",
+        "kv"
+    ],
+    "description": "An embedded key/value database for Go. 嵌入式纯go高性能kv数据库",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

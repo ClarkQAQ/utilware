@@ -1,0 +1,17 @@
+{
+    "id": "nX66dBHX28CpysfxKRJJAC",
+    "name": "lua",
+    "url": "https://github.com/yuin/gopher-lua",
+    "type": "local",
+    "author": "yuin",
+    "tag": [
+        "lua",
+        "vm",
+        "script"
+    ],
+    "description": "VM and compiler for Lua in Go. 基于 gopher-lua 魔改后的 lua 脚本引擎/虚拟机, 支持多线程, 但不保证 vm 内线程安全, 有插件可以方便的传入 golang userdata",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

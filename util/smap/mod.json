@@ -1,0 +1,13 @@
+{
+    "id": "jRDWbbeG2T9Vm2qqmQ5FwA",
+    "name": "smap",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": null,
+    "description": "多功能的泛型 map 实现, 线程安全, 支持多种类型的 key 和 value",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455856,
+    "update_time": 1665455856
+}

@@ -1,0 +1,16 @@
+{
+    "id": "HeEZ4U7mLcWf4ChvYWoHi7",
+    "name": "tig",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": [
+        "web",
+        "router"
+    ],
+    "description": "gin 风格的 web 框架, 使用前缀树路由附带 swagger ui, logger, timer 以及 content type 自动纠正",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455613,
+    "update_time": 1665455613
+}

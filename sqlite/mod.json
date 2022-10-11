@@ -1,0 +1,16 @@
+{
+    "id": "hs9sFbT7kZRGY8yXpACLbr",
+    "name": "sqlite",
+    "url": "https://gitlab.com/cznic/sqlite",
+    "type": "local",
+    "author": "cznic",
+    "tag": [
+        "sqlite",
+        "pure go"
+    ],
+    "description": "sqlite is a CGo-free port of SQLite/SQLite3. 使用 plan9 asm 实现的 sqlite3 数据库",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

@@ -1,0 +1,16 @@
+{
+    "id": "WLqBQN8S6T24oRZfVbHfdN",
+    "name": "csvutil",
+    "url": "https://github.com/jszwec/csvutil",
+    "type": "git",
+    "author": "jszwec",
+    "tag": [
+        "csvutil",
+        "csv"
+    ],
+    "description": "csvutil provides fast and idiomatic mapping between CSV and Go (golang) values. CSV 和 Go (golang) 之间数据映射, 一直都在用的CSV处理库, 好用!",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

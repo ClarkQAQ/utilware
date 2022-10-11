@@ -1,0 +1,13 @@
+{
+    "id": "JStC8qx2JayfBjvi6BtCGH",
+    "name": "crypc",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": null,
+    "description": "常用加密/取模封装",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455856,
+    "update_time": 1665455856
+}

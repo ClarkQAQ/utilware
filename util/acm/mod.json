@@ -1,0 +1,13 @@
+{
+    "id": "6kRJqmAwndZYdmx5XgvrYx",
+    "name": "acm",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": null,
+    "description": "字符匹配自动机, 用于敏感词识别以及返回错误判断",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455856,
+    "update_time": 1665455856
+}

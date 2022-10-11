@@ -1,0 +1,15 @@
+{
+    "id": "eiP6SgkJgLt79q3SbLDUGX",
+    "name": "gorm",
+    "url": "https://github.com/go-gorm/gorm",
+    "type": "git",
+    "author": "jinzhu",
+    "tag": [
+        "orm"
+    ],
+    "description": "The fantastic ORM library for Golang, aims to be developer friendly. Golang 出色的对开发人员友好的 ORM, 说它是 Golang 最好的 ORM 不为过吧",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

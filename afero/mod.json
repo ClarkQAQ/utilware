@@ -1,0 +1,16 @@
+{
+    "id": "FMJJYxD3QRc9tUsCgyDbse",
+    "name": "afero",
+    "url": "https://github.com/spf13/afero",
+    "type": "git",
+    "author": "spf13",
+    "tag": [
+        "filesystem",
+        "fs"
+    ],
+    "description": "A FileSystem Abstraction System for Go. Golang 文件系统抽象系统, 文件系统限制和虚拟的库, 封装得挺好....",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}

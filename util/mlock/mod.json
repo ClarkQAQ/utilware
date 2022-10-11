@@ -1,0 +1,13 @@
+{
+    "id": "EtHwih94TrMvEQkcg8fqk7",
+    "name": "mlock",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": null,
+    "description": "业务用键锁, 千万锁7秒加载完毕, 2秒全部上锁, 单个占用230Byte, 具有 context 的加锁可防止任务阻塞",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455856,
+    "update_time": 1665455856
+}

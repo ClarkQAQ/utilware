@@ -1,0 +1,17 @@
+{
+    "id": "8dR946vtmtM2TAVRCiUDXB",
+    "name": "sanitize",
+    "url": "https://github.com/kennygrant/sanitize",
+    "type": "git",
+    "author": "kennygrant",
+    "tag": [
+        "html",
+        "sanitize",
+        "security"
+    ],
+    "description": "sanitize provides functions for sanitizing text in golang strings. 去除 text 里面不安全的 html 内容",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665455856,
+    "update_time": 1665455856
+}

@@ -1,0 +1,16 @@
+{
+    "id": "ifktcPgLSmhB2CVzAP2hqC",
+    "name": "logger",
+    "url": "https://github.com/ClarkQAQ/utilware",
+    "type": "local",
+    "author": "ClarkQAQ",
+    "tag": [
+        "logger",
+        "log"
+    ],
+    "description": "自定义格式以及writer并且支持同步异步的日志库, 附带进度条以及耗时计算, 颜色仅支持 Posix 终端",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1665406669,
+    "update_time": 1665406669
+}
