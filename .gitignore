@@ -1,0 +1,12 @@
+
+**/.golangci.yml
+**/.gitignore
+!/.gitignore
+**/.travis.yml
+**/*_test.go
+
+**/.vscode
+**/.github
+**/test
+**/testdata
+**/vendor
