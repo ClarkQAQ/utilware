@@ -16,7 +16,6 @@
 
 引入:
 
-
 ```bash
 
 # 1.通常方式
@@ -29,7 +28,7 @@ go mod edit replace utilware => /xxx/utilware
 
 replace utilware => github.com/ClarkQAQ/utilware v0.0.0-[时间]-[commit]
 
-``` 
+```
 
 项目使用:
 
@@ -47,7 +46,7 @@ func main() {
 
 #### 索引:
 
-| 名称 | 描述 | 版本 | 源链接 |
-| ---- | ---- | ---- | ------ |
-{{range .}}|{{.Name}}| {{.Description}} | v{{.Version}} | {{.URL}} |
+| 名称 | 描述 | 版本 | 作者 | 源链接 |
+| ---- | ---- | ---- | ---- | ------ |
+{{range .}}| {{.Name}} | {{.Description}} | v{{.Version}} | {{.Author}} | {{.URL}} |
 {{end}}
