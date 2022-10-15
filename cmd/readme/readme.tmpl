@@ -1,33 +1,37 @@
 ## Golang Utilware 离线开发工具包
 
-#### 名称灵感来着Aimware, Aimware永远的空枪废物.....
+#### 名称灵感来着 Aimware, Aimware 永远的空枪废物.....
 
 ---
 
+> 坚持纯 Go 拒绝 CGO!
 
-> 坚持纯Go拒绝CGO!
+##### Utilware 无任何外部依赖, 真正的 ALL IN ONE, 用于离线开发以及闭关开发, 基本的工具都包含了.....
 
-
-##### Utilware 无任何外部依赖, 真正的ALL IN ONE, 用于离线开发以及闭关开发, 基本的工具都包含了.....
-
-
-##### 收集开源项目并去除CGO以及自己实现, 减少依赖后打包....依赖项目统一在 [dep]
-
+##### 收集开源项目并去除 CGO 以及自己实现, 减少依赖后打包....依赖项目统一在 [dep]
 
 ---
-
 
 #### Go Mod ( 使用方式) :
 
+引入:
 
 
 ```bash
+
+# 1.通常方式
+# 这种方式后续更新只需要 git pull 就行了
+
 git clone https://github.com/ClarkQAQ/utilware
-
 go mod edit replace utilware => /xxx/utilware
-```
 
+# 2.使用伪版本
 
+replace utilware => github.com/ClarkQAQ/utilware v0.0.0-[时间]-[commit]
+
+``` 
+
+项目使用:
 
 ```go
 package main
@@ -41,13 +45,9 @@ func main() {
 
 ```
 
-
-
 #### 索引:
 
-
-{{range .}}
-
-- `{{.Name}}` [v{{.Version}}] `{{.Description}}` [源链接]({{.URL}})
-
+| 名称 | 描述 | 版本 | 源链接 |
+| ---- | ---- | ---- | ------ |
+{{range .}}|{{.Name}}| {{.Description}} | v{{.Version}} | {{.URL}} |
 {{end}}
