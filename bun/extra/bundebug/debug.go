@@ -102,18 +102,10 @@ func (h *QueryHook) AfterQuery(ctx context.Context, evt *bun.QueryEvent) {
 	}
 
 	if evt.Result != nil {
-		if evt.Operation() == "SELECT" {
-			lastInsertId, _ := evt.Result.LastInsertId()
-
-			logger.Printf("[bun] [%s] %s (%d)\r\n%s",
-				formatOperation(evt), time.Since(evt.StartTime), lastInsertId, evt.Query)
-			return
-		}
-
 		rowsAffected, _ := evt.Result.RowsAffected()
-
 		logger.Printf("[bun] [%s] %s (%d)\r\n %s",
 			formatOperation(evt), time.Since(evt.StartTime), rowsAffected, evt.Query)
+		return
 	}
 
 	logger.Printf("[bun] [%s] %s\r\n%s",
