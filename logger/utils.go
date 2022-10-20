@@ -28,8 +28,15 @@ const (
 // 包装ANSI控制符
 // @param ansiCode ANSI控制符
 // @param val 格式化参数
-func ANSICode(ansiCcode string, val ...interface{}) string {
-	return ansiCcode + fmt.Sprint(val...) + ANSIreset
+func ANSICode(ansiCcode string, val string) string {
+	return ansiCcode + val + ANSIreset
+}
+
+// 包装ANSI控制符
+// @param ansiCode ANSI控制符
+// @param val 格式化参数
+func ANSICodef(ansiCcode string, format string, val ...interface{}) string {
+	return ansiCcode + fmt.Sprintf(format, val...) + ANSIreset
 }
 
 // 等级名称

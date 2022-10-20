@@ -1,12 +1,13 @@
 
-**/.golangci.yml
-**/.gitignore
+**/.*
+**/go.mod
+**/go.sum
 !/.gitignore
-**/.travis.yml
+!/go.mod
+!/go.sum
+**/Makefile
 **/*_test.go
 
-**/.vscode
-**/.github
 **/test
 **/testdata
 **/vendor

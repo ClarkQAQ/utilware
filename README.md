@@ -51,6 +51,7 @@ func main() {
 | afero | A FileSystem Abstraction System for Go. Golang 文件系统抽象系统, 文件系统限制和虚拟的库, 封装得挺好.... | v0.0.0 | spf13 | https://github.com/spf13/afero |
 | arpc | More Effective Network Communication. 更高效的网络通信通知和广播, 多协议自动重连支持加密的双向rpc库 | v0.0.0 | lesismal | https://github.com/lesismal/arpc |
 | bbolt | An embedded key/value database for Go. 嵌入式纯go高性能kv数据库 | v0.0.0 | benbjohnson,etcd-io | https://github.com/etcd-io/bbolt |
+| bun | SQL-first Golang ORM. SQL 优先的 Golang ORM, 对 Postgres 有很好的支持. | v0.0.0 | uptrace,vmihailenco | https://github.com/uptrace/bun |
 | cron | a cron library for go. Golang Cron 定时任务 | v0.0.0 | robfig | https://github.com/robfig/cron |
 | csvutil | csvutil provides fast and idiomatic mapping between CSV and Go (golang) values. CSV 和 Go (golang) 之间数据映射, 一直都在用的CSV处理库, 好用! | v0.0.0 | jszwec | https://github.com/jszwec/csvutil |
 | gimg | Golang 轻量级图片处理库 | v0.0.0 | ClarkQAQ | https://github.com/ClarkQAQ/utilware |
@@ -59,6 +60,7 @@ func main() {
 | ini | ini provides INI file read and write functionality in Go. Golang ini 配置文件读写以及映射 | v0.0.0 | unknwon | https://github.com/go-ini/ini |
 | logger | 自定义格式以及writer并且支持同步异步的日志库, 附带进度条以及耗时计算, 颜色仅支持 Posix 终端 | v0.0.0 | ClarkQAQ | https://github.com/ClarkQAQ/utilware |
 | lua | VM and compiler for Lua in Go. 基于 gopher-lua 魔改后的 lua 脚本引擎/虚拟机, 支持多线程, 但不保证 vm 内线程安全, 有插件可以方便的传入 golang userdata | v0.0.0 | yuin | https://github.com/yuin/gopher-lua |
+| msgpack | msgpack.org[Go] MessagePack encoding for Golang. Golang 的 MessagePack 编码实现 | v0.0.0 | vmihailenco | https://github.com/vmihailenco/msgpack |
 | request | A concise HTTP request client for Go. 一个超轻的 http 客户端, 追加了 multifrom 支持, 并且支持 socks5 或者 http 代理 URL | v0.0.0 | DavidCai1111 | https://github.com/DavidCai1111/request |
 | sqlite | sqlite is a CGo-free port of SQLite/SQLite3. 使用 plan9 asm 实现的 sqlite3 数据库 | v0.0.0 | cznic | https://gitlab.com/cznic/sqlite |
 | sqlx | 对 sqlx 拙劣的模仿, 特性是日志功能以及事务计数器 | v0.0.0 | ClarkQAQ | https://github.com/ClarkQAQ/utilware |

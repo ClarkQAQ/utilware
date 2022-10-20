@@ -8,6 +8,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"io/fs"
 	"net/http"
 	"reflect"
 	"strings"
@@ -205,6 +206,21 @@ func (c *Context) Data(code int, data []byte) {
 	}
 
 	c.Writer.Write(data)
+}
+
+func (c *Context) File(code int, ffs fs.FS, filename string) {
+	c.Status(code)
+	if c.Writer.Header().Get(HeaderContentType) == "" {
+		c.SetHeader(HeaderContentType, "text/html;  charset=utf-8")
+	}
+
+	b, e := fs.ReadFile(ffs, filename)
+	if e != nil {
+		http.Error(c.Writer, e.Error(), 500)
+		return
+	}
+
+	c.Writer.Write(b)
 }
 
 func (c *Context) WriteTo(w io.Writer) (int64, error) {

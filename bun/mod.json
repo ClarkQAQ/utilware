@@ -1,0 +1,18 @@
+{
+    "id": "br8spnXhG4uZSnn7KRmxJ6",
+    "name": "bun",
+    "url": "https://github.com/uptrace/bun",
+    "type": "git",
+    "author": "uptrace,vmihailenco",
+    "tag": [
+        "orm",
+        "postgresql",
+        "bun",
+        "database"
+    ],
+    "description": "SQL-first Golang ORM. SQL 优先的 Golang ORM, 对 Postgres 有很好的支持.",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1666271829,
+    "update_time": 1666271829
+}

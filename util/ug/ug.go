@@ -47,6 +47,15 @@ type Response struct {
 	Data    interface{} `json:"data"`
 }
 
+type Raw struct {
+	File    string      // 文件名
+	Line    int         // 行号信息
+	Code    int         // 错误码
+	Message string      // 提示信息
+	Err     error       // 错误信息
+	Data    interface{} // 返回数据(业务接口定义具体数据结构)
+}
+
 // 新建返回数据结构
 // @param code int 错误码
 // @param message string 提示信息
@@ -90,8 +99,15 @@ func (r *Data) Addf(format string, args ...interface{}) *Data {
 
 // 获取错误
 // @return error 错误信息
-func (r *Data) Get() error {
-	return r.err
+func (r *Data) Raw() *Raw {
+	return &Raw{
+		File:    r.file,
+		Line:    r.line,
+		Code:    r.code,
+		Message: r.message,
+		Err:     r.err,
+		Data:    r.data,
+	}
 }
 
 // recover 错误处理

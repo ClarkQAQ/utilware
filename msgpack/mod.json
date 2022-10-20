@@ -1,0 +1,16 @@
+{
+    "id": "CdzC7MTg84pUrme5C3nVCm",
+    "name": "msgpack",
+    "url": "https://github.com/vmihailenco/msgpack",
+    "type": "git",
+    "author": "vmihailenco",
+    "tag": [
+        "msgpack",
+        "msp"
+    ],
+    "description": "msgpack.org[Go] MessagePack encoding for Golang. Golang 的 MessagePack 编码实现",
+    "version": "0.0.0",
+    "updated": false,
+    "create_time": 1666271829,
+    "update_time": 1666271829
+}
